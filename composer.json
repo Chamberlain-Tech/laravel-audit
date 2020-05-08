@@ -1,0 +1,54 @@
+{
+    "name": "chamberlain-tech/laravel-audit",
+    "description": "",
+    "keywords": [
+        "chamberlain-tech",
+        "laravel-audit"
+    ],
+    "homepage": "https://github.com/chamberlain-tech/laravel-audit",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "John F. Chamberlain",
+            "email": "john@chamberlaintech.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ChamberlainTech\\LaravelAudit\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ChamberlainTech\\LaravelAudit\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ChamberlainTech\\LaravelAudit\\LaravelAuditServiceProvider"
+            ],
+            "aliases": {
+                "LaravelAudit": "ChamberlainTech\\LaravelAudit\\LaravelAuditFacade"
+            }
+        }
+    }
+}
